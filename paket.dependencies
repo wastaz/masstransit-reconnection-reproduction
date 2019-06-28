@@ -1,0 +1,10 @@
+version: 5.198.0
+framework: net462
+redirects: on
+
+source https://api.nuget.org/v3/index.json
+
+nuget MassTransit.RabbitMQ
+
+# RabbitMq.Client depends on this, but it doesnt seem to be compatible with >2.0 and if you go up to 2.0 it breaks
+nuget Microsoft.Diagnostics.Tracing.EventSource.Redist 1.1.28
